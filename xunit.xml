@@ -1,0 +1,18 @@
+<testsuite name="Mocha Tests" tests="16" failures="0" errors="0" skipped="0" timestamp="Thu, 20 Jul 2023 12:35:41 GMT" time="24.97">
+<testcase classname="Traversing DOM elements in Cypress" name="children() to get the children of DOM elements" time="3.131"/>
+<testcase classname="Traversing DOM elements in Cypress" name="closest() to validate the closest ancestor DOM element" time="0.933"/>
+<testcase classname="Traversing DOM elements in Cypress" name="eq() to retrieve a specific element based on index" time="1.258"/>
+<testcase classname="Traversing DOM elements in Cypress" name="filter() to retrieve DOM elements that match a specific selector" time="1.677"/>
+<testcase classname="Traversing DOM elements in Cypress" name="find() to retrieve DOM elements of a given selector" time="0.922"/>
+<testcase classname="Traversing DOM elements in Cypress" name="first() to retrieve the first DOM element within elements " time="1.26"/>
+<testcase classname="Traversing DOM elements in Cypress" name="last() to retrieve the last DOM element within elements" time="0.943"/>
+<testcase classname="Traversing DOM elements in Cypress" name="nextAll() to get all of the next sibling DOM elements within elements" time="1.561"/>
+<testcase classname="Traversing DOM elements in Cypress" name="nextUntil() to get all of the next sibling DOM elements within elements until another element" time="2.092"/>
+<testcase classname="Traversing DOM elements in Cypress" name="not() to remove DOM element(s) from the set of elements" time="0.993"/>
+<testcase classname="Traversing DOM elements in Cypress" name="parent() To get parent DOM element of elements" time="1.068"/>
+<testcase classname="Traversing DOM elements in Cypress" name="parents() to get parents DOM element of elements" time="0.985"/>
+<testcase classname="Traversing DOM elements in Cypress" name="prev() to get the previous sibling DOM element within elements" time="2.518"/>
+<testcase classname="Traversing DOM elements in Cypress" name="prevAll() to get all previous sibling DOM elements within elements" time="1.883"/>
+<testcase classname="Traversing DOM elements in Cypress" name="prevUntil() to get all previous sibling DOM elements within elements until other element" time="1.745"/>
+<testcase classname="Traversing DOM elements in Cypress" name="siblings() To get all sibling DOM elements of elements" time="1.88"/>
+</testsuite>
