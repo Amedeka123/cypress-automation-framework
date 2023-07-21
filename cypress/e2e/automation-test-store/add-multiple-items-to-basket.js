@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 import AutoStoreHomePage from "../../support/pageObjects/automation-test-store/autoStoreHomePage";
 import HairCarepage from "../../support/pageObjects/automation-test-store/hairCarePage";
-describe("Add multiple items to basket", () => {
+describe("Add multiple items to the basket", () => {
   const autoStoreHomePage = new AutoStoreHomePage()
   const hairCarePage = new HairCarepage()
   before(() => {
