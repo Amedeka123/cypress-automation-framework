@@ -7,9 +7,7 @@ describe("Test File Upload via webdriveruni", () => {
       .invoke("removeAttr", "target")
       .click({ force: true });
     //cy.fixture('images_1.jpeg').as("upload-file")
-    cy.get("#myFile").selectFile("/cypress/fixtures/images_1.jpeg", {
-      force: true,
-    });
+    cy.get("#myFile").selectFile("images_1.jpeg");
     cy.get("#submit-button").click();
   });
 
