@@ -1,4 +1,4 @@
-describe("Alias and Invoke", () => {
+describe("Alias and Invoke Test", () => {
   it.only("Valite a specfic hair care product", () => {
     cy.visit("https://automationteststore.com/");
     // Verify the full login page loaded correctly.
