@@ -1,27 +1,27 @@
 const { defineConfig } = require("cypress");
 
-const fs = require("fs-extra");
-const path = require("path");
+// const fs = require("fs-extra");
+// const path = require("path");
 
-function getConfigurationByFile(file) {
-  const pathToConfigFile = path.resolve( "cypress\\config", `${file}.json`);
+// function getConfigurationByFile(file) {
+//   const pathToConfigFile = path.resolve( "cypress\\config", `${file}.json`);
 
-  if (!fs.existsSync(pathToConfigFile)){
-    console.log("No custom congfig file found.")
-    return {};
-  }
-   return fs.readJson(pathToConfigFile);
-}
+//   if (!fs.existsSync(pathToConfigFile)){
+//     console.log("No custom congfig file found.")
+//     return {};
+//   }
+//    return fs.readJson(pathToConfigFile);
+// }
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-       const file = config.env.configFile || "  ";
+    projectId: "tn4rs3",
+    // setupNodeEvents(on, config) {
+    //   // implement node event listeners here
+    //   const file = config.env.configFile || "  ";
 
-       return getConfigurationByFile(file);
-    },
-    projectId: "tj1mzp",
+    //   return getConfigurationByFile(file);
+    // },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     chromeWebSecurity: false,
     env: {
@@ -41,18 +41,18 @@ module.exports = defineConfig({
     reporterOptions: {
       configFile: "reporter-config.json",
     },
-    reporter: "mochawesome",
-    reporterOptions: {
-      reportDir: "cypress/results/mochawesome",
-      overwrite: false,
-      html: false,
-      json: true,
-    },
+    // reporter: "mochawesome",
+    // reporterOptions: {
+    //   reportDir: "cypress/results/mochawesome",
+    //   overwrite: false,
+    //   html: false,
+    //   json: false,
+    // },
 
-    retries:{
+    retries: {
       runMode: 0,
-      openMode:1
-    }
+      openMode: 1,
+    },
   },
 });
 
