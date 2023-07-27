@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 
 describe("Test File Upload via webdriveruni", () => {
   it.only("Upload a file....", () => {
@@ -6,8 +5,8 @@ describe("Test File Upload via webdriveruni", () => {
     cy.get("#file-upload")
       .invoke("removeAttr", "target")
       .click({ force: true });
-    //cy.fixture('images_1.jpeg').as("upload-file")
-    cy.get("#myFile").selectFile("images_1.jpeg");
+    cy.fixture('image.jpeg').as("upload-file")
+    cy.get("#myFile").selectFile("@upload-file");
     cy.get("#submit-button").click();
   });
 
