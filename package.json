@@ -17,14 +17,16 @@
     "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
     "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge",
     "triggerAllTests-staging": "npx cypress run --env configFile=staging",
-    "cypress-multi-browser": "npm run triggerAllTests-autoTestStore -- --browser electron --headed & npm run triggerAllTests-autoTestStore -- --browser edge --headed"
+    "cypress-multi-browser": "npm run triggerAllTests-autoTestStore -- --browser electron --headed & npm run triggerAllTests-autoTestStore -- --browser edge --headed",
+    "cy:parallel":"cypress-parallel"
+
   },
   "author": "Israel Amedeka",
   "license": "ISC",
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.34.1",
     "@cypress/xpath": "^2.0.3",
-    "cypress": "^12.17.1",
+    "cypress": "^12.17.2",
     "cypress-multi-reporters": "^1.6.3",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3",
@@ -32,6 +34,7 @@
     "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "parallel": "^1.2.0"
   }
 }
