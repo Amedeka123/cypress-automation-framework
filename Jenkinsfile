@@ -8,7 +8,10 @@ pipeline {
             parallel {
                 stage('Slave Node1') {
                     agent {
-                        docker { image 'cypress/included:latest' }
+                        docker { 
+                            image 'cypress/included:latest'
+                            args '-w /home/jenkins/workspace/cypress_automation_pipeline@2'
+                        }
                     }
                     steps {
                         git url: 'https://github.com/qauni/cypress-automation-framework.git'
@@ -19,7 +22,10 @@ pipeline {
                 }
                 stage('Slave Node2') {
                     agent {
-                        docker { image 'cypress/included:latest' }
+                        docker { 
+                            image 'cypress/included:latest'
+                            args '-w /home/jenkins/workspace/cypress_automation_pipeline@3'
+                        }
                     }
                     steps {
                         git url: 'https://github.com/qauni/cypress-automation-framework.git'
