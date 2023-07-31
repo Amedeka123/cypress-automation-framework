@@ -8,7 +8,7 @@ pipeline {
             parallel {
                 stage('Slave Node1') {
                     agent {
-                      docker{image 'cypress/included:latest'}
+                      dockerfile true
                      }
                     steps {
                         git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
@@ -19,7 +19,7 @@ pipeline {
                 }
                 stage('Slave Node2') {
                      agent {
-                      docker{image 'cypress/included:latest'}
+                      dockerfile true
                      }
                     steps {
                         git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
