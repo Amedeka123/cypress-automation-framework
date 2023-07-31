@@ -7,7 +7,11 @@ pipeline {
         stage('Cypress Parallel Test Suite') {
             parallel {
                 stage('Slave Node1') {
-                    agent { dockerfile true }
+                    agent {
+                        docker{
+                            image 'cypress/included:latest'
+                        }
+                     }
                     steps {
                         git url: 'https://github.com/qauni/cypress-automation-framework.git'
                         bat 'npm install'
@@ -16,7 +20,11 @@ pipeline {
                     }
                 }
                 stage('Slave Node2') {
-                    agent {  dockerfile true }
+                    agent {  
+                        docker{
+                            image 'cypress/included:latest'
+                        }
+                     }
                     steps {
                         git url: 'https://github.com/qauni/cypress-automation-framework.git'
                         bat 'npm install'
