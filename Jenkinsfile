@@ -18,10 +18,8 @@ pipeline {
                     }
                 }
                 stage('Slave Node2') {
-                    agent {  
-                       agent {
+                     agent {
                       docker{image 'cypress/included:latest'}
-                     }
                      }
                     steps {
                         git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
