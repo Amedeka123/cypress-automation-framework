@@ -8,10 +8,10 @@ pipeline {
             parallel {
                 stage('Slave Node1') {
                     agent {
-                       label 'docker-agent'
+                      docker{image 'cypress/included:latest'}
                      }
                     steps {
-                        git url: 'https://github.com/qauni/cypress-automation-framework.git'
+                        git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run triggerAllTests-autostore-dashboard'
@@ -19,10 +19,12 @@ pipeline {
                 }
                 stage('Slave Node2') {
                     agent {  
-                        label 'docker-agent'
+                       agent {
+                      docker{image 'cypress/included:latest'}
+                     }
                      }
                     steps {
-                        git url: 'https://github.com/qauni/cypress-automation-framework.git'
+                        git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run triggerAllTests-autostore-dashboard'
