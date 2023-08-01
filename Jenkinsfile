@@ -12,9 +12,7 @@ pipeline {
                      }
                     steps {
                         git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
-                        bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerAllTests-autostore-dashboard'
                     }
                 }
                 stage('Slave Node2') {
@@ -23,9 +21,8 @@ pipeline {
                      }
                     steps {
                         git url: 'https://github.com/Amedeka123/cypress-automation-framework.git'
-                        bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerAllTests-autostore-dashboard'
+                    
                     }
                 }
             }
